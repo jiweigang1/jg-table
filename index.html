@@ -1,89 +1,225 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Jg-table : jg-table" />
-
+    <meta name="generator" content=
+    "HTML Tidy for Windows (vers 14 February 2006), see www.w3.org">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Jg-table : jg-table">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Jg-table</title>
+	
+	<link rel="stylesheet" type="text/css"  href="./jg-table/css/jgTable.css"> 
+	<link rel="stylesheet" type="text/css"  href="./jg-table/css/perfect-scrollbar.css">
+	<script type="text/javascript" src="./jg-table/js/jquery-1.10.2.js" ></script>
+    <script type="text/javascript" src="./jg-table/js/jquery.mousewheel.js" ></script>
+	<script type="text/javascript" src="./jg-table/js/perfect-scrollbar.js" ></script>
+	<script type="text/javascript" src="./jg-table/js/jquery.event.drag-2.2.js" ></script>
+	<script type="text/javascript" src="./jg-table/js/jquery.event.drop-2.2.js" ></script>
+	<script type="text/javascript" src="./jg-table/js/jquery.jgTable.js" ></script>
+	
+	
+   <title>Jg-table</title>
   </head>
-
   <body>
-
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/jiweigang1/jg-table">View on GitHub</a>
-
-          <h1 id="project_title">Jg-table</h1>
-          <h2 id="project_tagline">jg-table</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/jiweigang1/jg-table/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/jiweigang1/jg-table/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+      <a id="forkme_banner" href="https://github.com/jiweigang1/jg-table">Viewon GitHub</a>
+      <h1 id="project_title">Jg-table</h1>
+      <h2 id="project_tagline">jg-table</h2>
+	  <a class="zip_download_link" href="https://github.com/jiweigang1/jg-table/zipball/master">Download this project as a .zip file</a> 
+	  <a class="tar_download_link" href="https://github.com/jiweigang1/jg-table/tarball/master">Download this project as a tar.gz file</a>
     </div>
-
-    <!-- MAIN CONTENT -->
+	
+	<!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>开始喽</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
+      <h3>
+        <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"></a>
+      </h3>
+      <p>
+        jg-table 1.0<br>
+		1. 支持固定头角<br>
+		2. 支持拖拽换列<br>
+		3. 支持拖拽修改列宽度<br>
+		4. 优化滚动条
+      </p>
+      <pre>
+		<code>
+			$(function(){
+				$("#jgTable").jgTable();
+			});
+		</code>
+	 </pre>
+      <div style="width:400px" >
+    			<table id="jgTable" cellpadding="0" cellspacing="0"  >
+    			    <thead>
+    			        <tr>
+    			            <th>Browser</th>
+    			            <th>Visits</th>
+    			            <th>Pages/Visit</th>
+    			            <th>Avg. Time on Site</th>
+    			            <th>% New Visits</th>
+    			            <th>Bounce Rate</th>
+    			        </tr>
+    			    </thead>
+    			    <tbody>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			    </tbody>
+    			</table>
+    		</div>
+    		<div class="clear"></div>
+    	</div>
     </div>
-
-    <!-- FOOTER  -->
+	
+	<!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Jg-table maintained by <a href="https://github.com/jiweigang1">jiweigang1</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
+      <p class="copyright">
+        Jg-table maintained by <a href=
+        "https://github.com/jiweigang1">jiweigang1</a>
+      </p>
+      <p>
+        Published with <a href="http://pages.github.com">GitHub Pages</a>
+      </p>
     </div>
-
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	<script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
+    </script>
+	<script type="text/javascript">
+        try {
               var pageTracker = _gat._getTracker("jg-table");
-            pageTracker._trackPageview();
+				pageTracker._trackPageview();
             } catch(err) {}
-          </script>
-
-
+			
+		$(function(){
+				$("#jgTable").jgTable();
+		});	
+    </script>
   </body>
 </html>
