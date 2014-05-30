@@ -45,21 +45,27 @@
 			jg-table
 		</h3>
 		<p>
-				jg-table 1.0<br>
+				jg-table 1.1<br>
 				1. 支持固定头角<br>
 				2. 支持拖拽换列<br>
 				3. 支持拖拽修改列宽度<br>
-				4. 优化滚动条
+				4. 优化滚动条<br>
+				5. 支持多行表头，并能自动翻转到Tfoot。<br>
 		</p>
 		<pre>
-			<code>	
-				$(function(){
-					$("#jgTable").jgTable();
-				});
+			<code>
+$(function(){
+	$("#jgTable").jgTable();
+});
 			</code>
 		</pre>
-		<p><br></p>
-		  <div style="width:400px" >
+		<p>
+			<br>
+		</p>
+		<p>
+			单行表头支持拖拽换列
+		</p>
+		  <div style="width:400px;height:300px"  >
     			<table id="jgTable" cellpadding="0" cellspacing="0"  >
     			    <thead>
     			        <tr>
@@ -203,15 +209,176 @@
     			    </tbody>
     			</table>
     		</div>
-		
-		
-
-		
-
-		
-
-
-
+			<p>
+				支持多行表头、并会自动翻转表头到Tfoot
+			</p>
+			<div style="width:400px;height:300px" >
+    			<table id="jgTable1" cloneHeadToFoot="true" cellpadding="0" cellspacing="0"  >
+    			    <thead>
+    			        <tr>
+    			            <th rowspan="2">Browser</th>
+    			            
+    			            <th colspan="2" >Pages/Visit</th>
+    			            <th>Avg. Time on Site</th>
+    			            <th>% New Visits</th>
+    			            <th>Bounce Rate</th>
+    			        </tr>
+						<tr>
+    			            <th>Pages</th>
+    			            <th>Visit</th>
+    			            <th>Avg. Time on Site</th>
+    			            <th>% New Visits</th>
+    			            <th>Bounce Rate</th>
+    			        </tr>
+    			    </thead>
+    			    <tbody>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			        <tr>
+    			            <td>Firefox</td>
+    			            <td>1,990</td>
+    			            <td>3.11</td>
+    			            <td>00:04:22</td>
+    			            <td>70.00%</td>
+    			            <td>32.61%</td>
+    			        </tr>
+    			    </tbody>
+    			</table>
+				
+    		</div>
+			<p>
+				<br>
+				<br>
+				<br>
+				<br>
+			</p>
+			<p>
+				///////////////////////////////////////////////////<br>
+				日志<br>
+				1.1 (2014-5-30) ------------------------------------------------<br>
+				1 支持多表头拖动。<br>
+				2 多表头跨列，跨行，设置了cloneTheadToFoot属性后，可以自动翻转。<br>
+				3 增加鼠标经过，点击事件<br>
+				4 BugFix<br>
+			</p>
       </section>
     </div>
 
@@ -234,6 +401,7 @@
             } catch(err) {}
 			$(function(){
 				$("#jgTable").jgTable();
+				$("#jgTable1").jgTable();
 			});	
           </script>
 

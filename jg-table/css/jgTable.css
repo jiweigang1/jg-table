@@ -33,6 +33,14 @@
 	overflow:hidden;
 }
 
+.jg-table-wrapper  .jg-table-tbody tr:hover{
+	background:#F5F5F5
+}
+.jg-table-wrapper  .jg-table-tbody tr.select{
+	background: #7CC5E5;
+    border-color: #B8D0D6;
+}
+
 .jg-table-wrapper .resize-mark{
 	width:2px;
 	background:#333333;
@@ -41,7 +49,7 @@
 	left:0px;
 	top:0px;
 	display:none;
-	cursor:move;
+	cursor:col-resize;
 }
 .jg-table-wrapper  .jg-table .jg-table-cell{
 	 overflow: hidden;
