@@ -33,6 +33,10 @@
 	overflow:hidden;
 }
 
+.jg-table-wrapper  .jg-table-tbody tbody tr:first-child td{
+	border-top-width:0px;
+}
+
 .jg-table-wrapper  .jg-table-tbody tr:hover{
 	background:#F5F5F5
 }
