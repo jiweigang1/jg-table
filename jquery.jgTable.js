@@ -303,16 +303,16 @@
 			if(this._settings.cloneHeadToFoot){
 				this._$tfootTableContainer = $('<div  class="jg-table-tfoot-container" ><table class="jg-table-tfoot jg-table" ></table></div>').appendTo(this._$box);
 				this._$tfootTable = $(".jg-table-tfoot",this._$tfootTableContainer);
-				this._$tfootTable.append('<thead>'+html+'</thead>').width(this._settings._width).find("thead").append(this._$theadTable.find(".cindex").clone());
+				this._$tfootTable.append('<thead></thead>').width(this._settings._width).find("thead").append(this._$theadTable.find(".cindex").clone());
 				var $ths = this._$tfootTable.find(".cindex>th");
-				this._footData = this._headerData.reverse();
 				var hd	=[];
 				var html ="";
 				var $p = $("<p></p>")
-				for(var i=0;i<this._footData.length;i++){
+				//alert(this._headerData.length)
+				for(var i=this._headerData.length-1;i>=0;i--){
 					html+="<tr>";
-					for(k=0;k<this._footData[i].length;k++){
-						var data   = this._footData[i][k].data(this._th_data_name);
+					for(k=0;k<this._headerData[i].length;k++){
+						var data   = this._headerData[i][k].data(this._th_data_name);
 						var cindex = data.cindex;	
 						var tfc	   = data.tfc = []; 	
 						for(var m=0;m<cindex.length;m++){
@@ -320,19 +320,21 @@
 						}
 						var e = false;
 						for(var l=0;l<hd.length;l++){
-							if(hd[l] == this._footData[i][k]){
+							if(hd[l] == this._headerData[i][k]){
 								e = true;
+								break;
 							}
 						}
 						if(!e){
-							hd.push(this._footData[i][k]);
-							html+= $p.empty().append(this._footData[i][k].clone()).html();
+							hd.push(this._headerData[i][k]);
+							html+= $p.empty().append(this._headerData[i][k].clone()).html();
+							//alert(html)
 						}
 					}
 					html+="</tr>";
 				}
 				this._$tfootTable.find("thead").append(html);
-				this._headerData.reverse();
+				
 				hd=null;
 			}
 		}
